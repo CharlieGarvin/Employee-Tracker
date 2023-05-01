@@ -11,32 +11,32 @@ const connection = mysql.createConnection({
 });
 
 function start() {
-    inquirer.createPromptModule({
-        name: 'action',
-        type: 'list',
-        message: 'What would you like to do?',
-        choice: ['View all departments', 'View all roles', 'View all employees', 'Add a department', 'Add a role', 'Update employee role', 'Exit'],
+    inquirer.prompt({
+        name: "action",
+        type: "list",
+        message: "What would you like to do?",
+        choices: ["View all departments", "View all roles", "View all employees", "Add a department", "Add a role", "Update employee role", "Exit"],
     }).then(function (answer) {
         switch(answer.action) {
-            case 'View all departments':
+            case "View all departments":
                 viewDepartment();
                 break;
-            case 'View all roles':
+            case "View all roles":
                 viewRoles();
                 break;
-            case 'View all employees':
+            case "View all employees":
                 viewEmployees();
                 break;
-            case 'Add a department':
+            case "Add a department":
                 addDepartment();
                 break;
-            case 'Add a role':
+            case "Add a role":
                 addRole();
                 break;
-            case 'Update employee role':
+            case "Update employee role":
                 updateEmployeeRole();
                 break;
-            case 'Exit':
+            case "Exit":
                 connection.end();
                 break;
                default:
@@ -44,5 +44,16 @@ function start() {
         }
     }); 
 } 
+
+const viewDepartment = () => {
+    let query = "SELECT * FROM department";
+
+    connection.query(query, function(err, res) {
+        if (err) throw (err);
+        console.table(res);
+        start();
+    });
+};
+
 
 start ();
