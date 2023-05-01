@@ -11,7 +11,7 @@ const connection = mysql.createConnection({
 });
 
 function start() {
-    inquirer.createPrompt({
+    inquirer.createPromptModule({
         name: 'action',
         type: 'list',
         message: 'What would you like to do?',
