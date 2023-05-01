@@ -17,4 +17,4 @@
 * I want to make it so all the different options work. Currently all of the view options work but the ability to add employees, roles, departments, or updating an employee is unavalible. 
 
 ## Video Showcase
-[]([MySql Business demo.webm](https://user-images.githubusercontent.com/119140410/235546823-e0c03fe3-80eb-478b-82e9-6416ff202586.webm)
+[MySql Business demo.webm](https://user-images.githubusercontent.com/119140410/235547022-ecd32b52-d173-4cdf-bc40-1a0429847cd1.webm)
