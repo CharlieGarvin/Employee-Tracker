@@ -1,16 +1,16 @@
 USE employees_db;
 
 INSERT INTO department (name) VALUES
-('Sales'),
+('Tech'),
 ('Human Resources'),
 ('Finance'), 
-('Security');
+('Managment');
 
 INSERT INTO role (title, salary, department_id) VALUES
 ('Web Developer', 90000, 1),
-('Accountant', 75000, 2),
-('Manager', 80000, 3),
-('Paralegal', 60000, 4);
+('Accountant', 75000, 3),
+('Manager', 80000, 4),
+('Paralegal', 60000, 2);
 
 INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES
 ('John', 'Smith', 1, 4),
